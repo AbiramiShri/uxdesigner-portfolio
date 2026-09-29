@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0b;
+  --bg-elevated: #141416;
+  --bg-card: #1a1a1d;
+  --text: #a1a1aa;
+  --text-heading: #fafafa;
+  --text-muted: #71717a;
+  --accent: #c8f542;
+  --accent-dim: rgba(200, 245, 66, 0.12);
+  --border: #27272a;
+  --border-subtle: #1f1f23;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --max-width: 1120px;
+  --section-gap: 120px;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--text-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: min(var(--max-width), 100% - 48px);
+  margin-inline: auto;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-gap: 80px;
+  }
+
+  .container {
+    width: min(var(--max-width), 100% - 32px);
+  }
+}
