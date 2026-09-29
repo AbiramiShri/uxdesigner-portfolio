@@ -1,0 +1,71 @@
+.graphic {
+  min-height: 100svh;
+  padding: 40px 0 80px;
+  background: #e8e8e8;
+}
+
+.graphic__header {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.graphic__heading {
+  margin-bottom: 0;
+}
+
+.graphic__home {
+  position: absolute;
+  top: auto;
+  bottom: 8px;
+  right: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+
+.graphic__home:hover {
+  opacity: 0.55;
+}
+
+.graphic__grid {
+  columns: 2;
+  column-gap: 16px;
+}
+
+.graphic__item {
+  break-inside: avoid;
+  margin: 0 0 16px;
+  overflow: hidden;
+}
+
+.graphic__item--wide {
+  column-span: all;
+}
+
+.graphic__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .graphic {
+    padding: 24px 0 48px;
+  }
+
+  .graphic__home {
+    bottom: 0;
+  }
+
+  .graphic__grid {
+    columns: 1;
+    column-gap: 0;
+  }
+
+  .graphic__item {
+    margin-bottom: 12px;
+  }
+}

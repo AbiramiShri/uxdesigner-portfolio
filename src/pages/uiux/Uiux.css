@@ -1,0 +1,138 @@
+.uiux {
+  min-height: 100svh;
+  padding: 40px 0 80px;
+  background: #e8e8e8;
+}
+
+.uiux__header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.uiux__heading {
+  margin-bottom: 0;
+}
+
+.uiux__home {
+  position: absolute;
+  top: auto;
+  bottom: 8px;
+  right: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+
+.uiux__home:hover {
+  opacity: 0.55;
+}
+
+.uiux__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1000px;
+}
+
+.uiux-card {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.uiux-card__media {
+  min-height: 280px;
+  overflow: hidden;
+  background: #111111;
+}
+
+.uiux-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uiux-card__body {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 32px 28px 36px;
+  min-height: 280px;
+}
+
+.uiux-card__category {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 28px;
+}
+
+.uiux-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.uiux-card__summary {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #333333;
+  margin-bottom: auto;
+  max-width: 340px;
+}
+
+.uiux-card__cta {
+  align-self: flex-end;
+  margin-top: 28px;
+  padding: 10px 22px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #000000;
+  background: #d9d9d9;
+  border-radius: 999px;
+  transition: background var(--transition);
+}
+
+.uiux-card__cta:hover {
+  background: #c4c4c4;
+}
+
+@media (max-width: 768px) {
+  .uiux {
+    padding: 24px 0 48px;
+  }
+
+  .uiux-card {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+
+  .uiux-card__media {
+    min-height: 220px;
+  }
+
+  .uiux-card__body {
+    padding: 24px;
+    min-height: 0;
+  }
+
+  .uiux-card__title {
+    font-size: 1.6rem;
+  }
+
+  .uiux-card__summary {
+    margin-bottom: 24px;
+  }
+}

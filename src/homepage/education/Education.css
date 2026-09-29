@@ -1,0 +1,72 @@
+.education {
+  padding-block: var(--section-gap);
+  background: var(--bg-muted);
+}
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.education__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 40px;
+  background: #ffffff;
+  border-radius: var(--radius-pill);
+}
+
+.education__left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  min-width: 0;
+}
+
+.education__degree {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.education__school {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666666;
+}
+
+.education__date {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666666;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .education__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 16px 24px;
+    border-radius: var(--radius);
+  }
+
+  .education__left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .education__degree {
+    white-space: normal;
+  }
+
+  .education__date {
+    margin-left: 0;
+  }
+}
